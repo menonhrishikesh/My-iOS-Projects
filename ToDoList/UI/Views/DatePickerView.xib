@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DatePickerView" customModule="ToDoList" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="324" height="206"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="UGi-vB-elj">
+                    <rect key="frame" x="0.0" y="44" width="324" height="162"/>
+                </datePicker>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1jh-qm-PnG">
+                    <rect key="frame" x="0.0" y="0.0" width="324" height="44"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="ORS-UJ-Me8">
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem style="done" systemItem="done" id="9Jl-88-ZnB">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </items>
+                    <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </toolbar>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="UGi-vB-elj" secondAttribute="bottom" id="3hD-0U-5cp"/>
+                <constraint firstAttribute="trailing" secondItem="1jh-qm-PnG" secondAttribute="trailing" id="5Ld-ob-88t"/>
+                <constraint firstItem="UGi-vB-elj" firstAttribute="top" secondItem="1jh-qm-PnG" secondAttribute="bottom" id="5Ne-2R-X0k"/>
+                <constraint firstItem="1jh-qm-PnG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="TKh-jM-6ps"/>
+                <constraint firstItem="UGi-vB-elj" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="YFg-gb-ULs"/>
+                <constraint firstItem="1jh-qm-PnG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cfS-4Y-12g"/>
+                <constraint firstItem="UGi-vB-elj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hF6-Zu-t96"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="datePicker" destination="UGi-vB-elj" id="ofO-ad-kAi"/>
+                <outlet property="doneButton" destination="9Jl-88-ZnB" id="QAr-Kv-8Mk"/>
+            </connections>
+            <point key="canvasLocation" x="-23.188405797101453" y="103.79464285714285"/>
+        </view>
+    </objects>
+</document>
